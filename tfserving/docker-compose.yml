@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  server:
+    container_name: 'tensorflow-serving1'
+    image: tensorflow/serving
+    ports:
+      - '8501:8501'
+      - '8500:8500'
+    volumes:
+      - './models/0_class:/models/0_class'
+      - './models/1_class:/models/1_class'
+      - './models/models:/models/pl_class'
+      - './models/oodmodel:/models/od_class'
+      - './models/model_config.config:/models/config.config'
+    command:
+      - '--model_config_file=/models/config.config'
+      - '--model_config_file_poll_wait_seconds=60'
+      - '--tensorflow_intra_op_parallelism=1'
+      - '--tensorflow_inter_op_parallelism=1'
+    cpuset: '0-0'

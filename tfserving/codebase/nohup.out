@@ -1,0 +1,1019 @@
+nohup: ignoring input
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ flink-tfserve ---
+[INFO] Deleting /home/cc/team-8/codebase/external-serving/tfserving/codebase/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ flink-tfserve ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/cc/team-8/codebase/external-serving/tfserving/codebase/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ flink-tfserve ---
+[INFO] Compiling 10 source files to /home/cc/team-8/codebase/external-serving/tfserving/codebase/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ flink-tfserve ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/cc/team-8/codebase/external-serving/tfserving/codebase/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ flink-tfserve ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ flink-tfserve ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: /home/cc/team-8/codebase/external-serving/tfserving/codebase/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ flink-tfserve ---
+[INFO] Building jar: /home/cc/team-8/codebase/external-serving/tfserving/codebase/target/flink-tfserve-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ flink-tfserve ---
+[INFO] Installing /home/cc/team-8/codebase/external-serving/tfserving/codebase/target/flink-tfserve-1.0-SNAPSHOT.jar to /home/cc/.m2/repository/groupId/flink-tfserve/1.0-SNAPSHOT/flink-tfserve-1.0-SNAPSHOT.jar
+[INFO] Installing /home/cc/team-8/codebase/external-serving/tfserving/codebase/pom.xml to /home/cc/.m2/repository/groupId/flink-tfserve/1.0-SNAPSHOT/flink-tfserve-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.984s
+[INFO] Finished at: Thu Apr 20 23:14:05 UTC 2023
+[INFO] Final Memory: 43M/1591M
+[INFO] ------------------------------------------------------------------------
+=========================================================
+Scaling the number of parallel threads used for serving to '1'...
+Used CPU cores: 0-0
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (5f23753666b5fd7fd41ddb92c107442a259a328e9310ae260a4f56c151c3c666): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 1
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 1
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 1
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 1
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 17:31.256s
+[INFO] Finished at: Thu Apr 20 23:31:48 UTC 2023
+[INFO] Final Memory: 151M/14766M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '2'...
+Used CPU cores: 0-1
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (c85cb4694c9cc615d4d120e40062e6eaeaaf9d416712515f115168e4c1f2e98e): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 1
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 2
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 2
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 2
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 17:31.443s
+[INFO] Finished at: Thu Apr 20 23:49:41 UTC 2023
+[INFO] Final Memory: 208M/14800M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '4'...
+Used CPU cores: 0-3
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (f53bba08001fb6886750af9b896185d5f33cfc723b475c90d3a59a3ab1d8a743): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 1
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 4
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 4
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 4
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 17:31.599s
+[INFO] Finished at: Fri Apr 21 00:07:35 UTC 2023
+[INFO] Final Memory: 171M/13740M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '8'...
+Used CPU cores: 0-7
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (dd9c42f01fa1c203290109f80241fe896a96b5b9fe3bc5af539a04eb81065dac): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 1
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: https://repo.maven.apache.org/maven2/io/grpc/grpc-api/maven-metadata.xml
+2/4 KB   3/4 KB   4/4 KB            Downloaded: https://repo.maven.apache.org/maven2/io/grpc/grpc-api/maven-metadata.xml (4 KB at 10.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/io/grpc/grpc-core/maven-metadata.xml
+2/5 KB   3/5 KB   5/5 KB   5/5 KB            Downloaded: https://repo.maven.apache.org/maven2/io/grpc/grpc-core/maven-metadata.xml (5 KB at 135.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/io/grpc/grpc-netty-shaded/maven-metadata.xml
+2/4 KB   3/4 KB   4/4 KB            Downloaded: https://repo.maven.apache.org/maven2/io/grpc/grpc-netty-shaded/maven-metadata.xml (4 KB at 126.5 KB/sec)
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 8
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 8
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 8
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 17:32.061s
+[INFO] Finished at: Fri Apr 21 00:25:29 UTC 2023
+[INFO] Final Memory: 211M/14705M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '16'...
+Used CPU cores: 0-15
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (8a53c9ceb0f99e81af390aae8ef5c079c91bcf9ab389a2a55901468ce0e8e4cd): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 1
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 16
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 16
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 16
+Run Pipeline1
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 17:30.960s
+[INFO] Finished at: Fri Apr 21 00:43:22 UTC 2023
+[INFO] Final Memory: 208M/14589M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '1'...
+Used CPU cores: 0-0
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (755683fad006257bc0bc7cae99a38bce9286151e8657f04010b84c4b4cc0ae48): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 2
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 1
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 1
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 1
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 25:16.832s
+[INFO] Finished at: Fri Apr 21 01:09:11 UTC 2023
+[INFO] Final Memory: 243M/13590M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '2'...
+Used CPU cores: 0-1
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (a038b966350ef5dece2cb939b97eee7297c0ebcca0cd70f454f26be2bbd892e9): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 2
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 2
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 2
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 2
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 25:09.687s
+[INFO] Finished at: Fri Apr 21 01:34:42 UTC 2023
+[INFO] Final Memory: 231M/13582M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '4'...
+Used CPU cores: 0-3
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (14d5579cb7a3dc166c5edc5353a3ab7ef4df752fb0e0f25ce5ec5a4d85473403): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 2
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 4
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 4
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 4
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 25:10.087s
+[INFO] Finished at: Fri Apr 21 02:00:14 UTC 2023
+[INFO] Final Memory: 229M/13601M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '8'...
+Used CPU cores: 0-7
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (d1af158449c8ade87f5799821e89318508bb6dd5bc0830500ec0f72a444a9e09): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 2
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 8
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 8
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 8
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 25:08.261s
+[INFO] Finished at: Fri Apr 21 02:25:44 UTC 2023
+[INFO] Final Memory: 242M/13642M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '16'...
+Used CPU cores: 0-15
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (b543dd1f137fb0e715b7299c6d2423e543398b8d7e9d2a9130361e9fe424e384): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 2
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 16
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 16
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 16
+Run Pipeline2
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 25:18.995s
+[INFO] Finished at: Fri Apr 21 02:51:25 UTC 2023
+[INFO] Final Memory: 188M/13534M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '1'...
+Used CPU cores: 0-0
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (edd0025d88249d6d63642c27839905cf200b40e16a33def3f137f7b3cfe36921): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 3
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 1
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 1
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 1
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26:16.669s
+[INFO] Finished at: Fri Apr 21 03:18:14 UTC 2023
+[INFO] Final Memory: 231M/12396M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '2'...
+Used CPU cores: 0-1
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (40bcf7349de4d9b0e4ac39dce4cf55ce8b823f4c4ef5a15fdf976acada299bf8): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 3
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 2
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 2
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 2
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26:15.339s
+[INFO] Finished at: Fri Apr 21 03:44:51 UTC 2023
+[INFO] Final Memory: 210M/13627M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '4'...
+Used CPU cores: 0-3
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (9f7b08af8e556a0563bc790358577280bdeabe1391feeb93eb550c7be16c203b): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 3
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 4
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 4
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 4
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26:10.211s
+[INFO] Finished at: Fri Apr 21 04:11:23 UTC 2023
+[INFO] Final Memory: 153M/13711M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '8'...
+Used CPU cores: 0-7
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (27e9a43eaf6d03c60d5f7db3001ef6aa5280e7fbb8839cf522a6657b72719bda): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 3
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 8
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 8
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 8
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26:11.130s
+[INFO] Finished at: Fri Apr 21 04:37:56 UTC 2023
+[INFO] Final Memory: 210M/13741M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '16'...
+Used CPU cores: 0-15
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (526eaf18adeba6808d5c929a49c9fd2a6201ced9671eefbec3abe171d6e80968): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 3
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 16
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 16
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 16
+Run Pipeline3
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26:09.824s
+[INFO] Finished at: Fri Apr 21 05:04:28 UTC 2023
+[INFO] Final Memory: 153M/13539M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+./start_all_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '1'...
+Used CPU cores: 0-0
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (b0e868efe269e3bb5c46fd529928786115d70d220c9beaa4c0cc1de206372958): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 4
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 1
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 1
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 1
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26:25.471s
+[INFO] Finished at: Fri Apr 21 05:31:26 UTC 2023
+[INFO] Final Memory: 242M/13685M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '2'...
+Used CPU cores: 0-1
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (17f288668f1caf8fd3c88dff4bb8b9305942ac8146324386864412414d1eebb1): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 4
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 2
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 2
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 2
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26:27.216s
+[INFO] Finished at: Fri Apr 21 05:58:15 UTC 2023
+[INFO] Final Memory: 242M/13693M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '4'...
+Used CPU cores: 0-3
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (11c5f9229150e4b22995dee10977191a56234c290f67106a07b8dae654ecbfb2): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 4
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 4
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 4
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 4
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26:27.767s
+[INFO] Finished at: Fri Apr 21 06:25:05 UTC 2023
+[INFO] Final Memory: 242M/13545M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '8'...
+Used CPU cores: 0-7
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (e715fb28f4a8dd1ae8db5daf173fe928ae086a0affaf33ceed16d91ba4857825): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 4
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 8
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 8
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 8
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26:24.801s
+[INFO] Finished at: Fri Apr 21 06:51:51 UTC 2023
+[INFO] Final Memory: 299M/13643M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
+=========================================================
+Scaling the number of parallel threads used for serving to '16'...
+Used CPU cores: 0-15
+ Container tensorflow-serving1  Recreate
+ Container tensorflow-serving1  Recreated
+ Container tensorflow-serving1  Starting
+Error response from daemon: driver failed programming external connectivity on endpoint tensorflow-serving1 (9c3bc83ff7c659de7c296c458f229edbed81e19401c4ea12edd16001a2270321): Bind for 0.0.0.0:8501 failed: port is already allocated
+Run on Pipeline 4
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TF SERVE EXPERIMENT 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ flink-tfserve ---
+=================SCALABILITY EXPERIMENT 0==================
+MODEL REPLICAS = 16
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 1==================
+MODEL REPLICAS = 16
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+=================SCALABILITY EXPERIMENT 2==================
+MODEL REPLICAS = 16
+Run Pipeline4
+Input producers: 6
+Input rate per producer: 5000
+==================================END====================================
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26:26.798s
+[INFO] Finished at: Fri Apr 21 07:18:40 UTC 2023
+[INFO] Final Memory: 299M/13781M
+[INFO] ------------------------------------------------------------------------
+no container to kill./experiment_sca.sh: line 23: /home/cc: Is a directory
+./experiment_sca.sh: line 24: /home/cc: Is a directory
